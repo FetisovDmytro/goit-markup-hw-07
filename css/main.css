@@ -571,35 +571,26 @@ height:auto;
     fill: var(--Blue-color);
    }
 
-/* Флекс для кнопок портфолио */
-
-.flex-btn {
-    display: flex;
-    justify-content: center;
-    
-}
-
-.btn-f{
-    margin-right: 8px;
-}
-
-.btn-f:last-child{
-    margin-right: 0;
-}
-
-
-
-
 
 /* Оформлення Портфоліо */
 
-.flex-btn {
+.button-list {
+    display: flex;
+    justify-content: center;
     margin-top: 0;
     margin-bottom: 50px;
     
 }
 
-.btn {
+.button-list__item{
+    margin-right: 8px;
+}
+
+.button-list__item:last-child{
+    margin-right: 0;
+}
+
+.button-list__menu-btn {
     padding: 6px 22px;
     border: 1px solid transparent;
     border-radius: 4px;
@@ -613,7 +604,7 @@ height:auto;
     transition: color var(--transition-dur-n-fuc) , background-color var(--transition-dur-n-fuc) , box-shadow var(--transition-dur-n-fuc);
 }
 
-.btn:hover {
+.button-list__menu-btn:hover {
     background-color: var(--Blue-color);
     color: var(--white-bgc);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -622,44 +613,63 @@ height:auto;
 
 /* Флекс для прикладів */
 
-.examples {
+.portfolio__list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
    
 }
 
-.examples-flex {
-    
-    margin-right: 30px;
-    margin-bottom: 30px;
-}
 
-
-
-.examples-flex:nth-child(3n){
-margin-right: 0;
-}
-
-.examples-flex:nth-last-child(-n+3){
-    margin-bottom: 0;
-}
-
-.ex-link {
+.portfolio-list__link {
     display: block;
     transition: box-shadow var(--transition-dur-n-fuc);
-
 }
 
 
-.ex-link:hover , .ex-link:focus {
-    
+.portfolio-list__link:hover , .portfolio-list__link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 
-.ex-div {
-        padding: 20px 24px;
+
+
+/* Оверлей для портфоліо */
+
+
+.portfolio-list__wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-list__overlay {
+    position: absolute;
+    margin: 0;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(0, 100%);
+    padding: 63px 24px;
+    overflow: auto;
+    transition: transform var(--transition-dur-n-fuc);
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    background-color:var(--portfolio-overlay) ;
+    color: var(--white-bgc);
+}
+
+
+
+.portfolio-list__link:hover .portfolio-list__overlay ,
+.portfolio-list__link:focus .portfolio-list__overlay {
+    transform: translate(0,0);
+}
+
+
+.portfolio-list__card {
+    padding: 20px 24px;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: #EEEEEE;
@@ -671,46 +681,10 @@ margin-right: 0;
     border-right-color: #EEEEEE;
 }
 
-/* Оверлей для портфоліо */
 
-
-.portfolio-card-wrapper {
-    position: relative;
-    overflow: hidden;
-}
-
-.overlay-portfolio {
-    position: absolute;
-    margin: 0;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: translate(0, 100%);
-    padding: 63px 24px;
-    overflow: auto;
-    transition: transform var(--transition-dur-n-fuc);
-
-    font-size: 18px;
-    line-height: 1.56;
-    letter-spacing: 0.03em;
-    background-color:var(--portfolio-overlay) ;
-    color: #FFFFFF;
-}
-
-
-
-.ex-link:hover .overlay-portfolio ,
-.ex-link:focus .overlay-portfolio {
-    transform: translate(0,0);
-}
-
-
-.ex-title {
+.portfolio-list__title {
     margin-top: 0;
     margin-bottom: 4px;
-   
-
     color: var(--title-color);
     font-weight: 700;
     font-size: 18px;
@@ -719,7 +693,7 @@ margin-right: 0;
     letter-spacing: 0.06em;
 }
 
-.ex-text {
+.portfolio-list__descr {
    margin: 0%;
     color: var(--text-color);
     font-weight: 400;
@@ -788,7 +762,6 @@ margin-right: 0;
 }
 
 .footer__link {
-  
     color: var(--color-adrsf);
     font-style: normal;
     font-size: 14px;
@@ -808,7 +781,6 @@ margin-right: 0;
 .footer-social-container__text {
     margin-top: 0;
     margin-bottom: 20px;
-    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
