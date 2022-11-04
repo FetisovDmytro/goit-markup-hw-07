@@ -1,5 +1,4 @@
 
-/* Логотип */
 .logo {
     padding-top: 24px;
     padding-bottom: 24px;
@@ -7,10 +6,9 @@
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
-    line-height: 1,9;
+    line-height: 1.19;
     letter-spacing: 0.03em;
 }
-/* Флекс навігація*/
 
 .page-header {
     border: 1px solid #ECECEC;
@@ -19,14 +17,11 @@
 .page-header__container {
     display: flex;
     align-items: center;
-   
-   
 }
 
 .nav-menu {
     display: flex;
     align-items: center;
-   
 }
 
 .nav-menu__list {
@@ -46,11 +41,6 @@
 
 }
 
-
-
-
-
-
 /* Навігація */
 .nav-menu__link {
     display: block;
@@ -67,11 +57,6 @@
         color:var(--Blue-color)
        }
 }
-
-
-
-
-
 
 .nav-menu__link--current {
     color: var(--Blue-color);
