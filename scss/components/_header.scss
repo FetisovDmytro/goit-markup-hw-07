@@ -38,13 +38,16 @@
 /* Маржин вправо */
 .nav-menu__item  {
     margin-right: 50px;
+
+    &:nth-child(3) {
+        margin-right: 0%;
+    }
+    
+
 }
 
-/* Убрати відступ */
 
-.nav-menu__list li:nth-child(3) {
-    margin-right: 0%;
-}
+
 
 
 
@@ -59,32 +62,36 @@
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+
+    &:hover ,&:focus  {
+        color:var(--Blue-color)
+       }
 }
 
 
 
-/* Ховер навігації */
-.nav-menu__link:hover ,.nav-menu__link:focus  {
- color:var(--Blue-color)
-}
+
+
 
 .nav-menu__link--current {
     color: var(--Blue-color);
     position: relative;
     
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        height: 4px;
+        background-color: var(--Blue-color);
+        border-radius: 2px;
+    
+    }
+
 }
 
-.nav-menu__link--current::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    width: 100%;
-    height: 4px;
-    background-color: var(--Blue-color);
-    border-radius: 2px;
 
-}
 /* Контакти */
 .contakts-list  {
   display: flex;
@@ -107,11 +114,14 @@
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+
+    &:hover ,&:focus {
+        color: var(--Blue-color);
+        }
+    
+
 }
 
-.contakts-list__link:hover ,.contakts-list__link:focus {
-    color: var(--Blue-color);
-    }
 
  .contacts-list__svg {
     display: inline-block;
@@ -120,6 +130,6 @@
      
  }
  
- .contacts-list__svg {
-     fill: currentColor;
-    }
+//  .contacts-list__svg {
+//      fill: currentColor;
+//     }

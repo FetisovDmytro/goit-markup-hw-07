@@ -2,27 +2,32 @@
 
 .features-list__item {
     margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0%;
+    }
 }
- .features-list__item:last-child {
-    margin-right: 0%;
-}
+
 
 
 
 .features__thumb{
     margin-bottom: 30px;
+
+    &::before {
+        display: block;
+        content: "";
+        height: 120px;
+        
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: var(--bgc-comands);
+        border-radius: 4px;
+    }
+
 }
 
-.features__thumb::before {
-    display: block;
-    content: "";
-    height: 120px;
-    
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--bgc-comands);
-    border-radius: 4px;
-}
+
 
 .features__thumb--icon-antena::before {
     

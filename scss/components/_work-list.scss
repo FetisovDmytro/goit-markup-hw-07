@@ -1,5 +1,3 @@
-/*  Види робот */
-
 .work-list {
     display: flex;
     justify-content: space-between;
@@ -16,13 +14,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
     height: 70px;
     width: 100%;
     margin: 0;
-    
-
-   
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -32,17 +26,5 @@
     color: var(--white-bgc);
     background-color: rgba(47, 48, 58, 0.8);
     
-    
 }
 
-
-.section-title {
-    margin-top: 0;
-    margin-bottom: 50px;
-    color: var(--title-color);
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-    letter-spacing: 0.03em;
-}

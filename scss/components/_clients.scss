@@ -5,11 +5,7 @@
         justify-content: center;
         gap: 30px;
     }
-
-
-
    
-
     .clients-list__link {
         width: 170px;
         height: 92px;
@@ -20,6 +16,15 @@
         border-radius: 4px;
         color: #AFB1B8;
         transition: border-color var(--transition-dur-n-fuc);
+    
+        &:hover {
+            border-color: var(--Blue-color);
+        }
+    
+       &:hover .clients-list__icon {
+        fill: var(--Blue-color);
+       }
+    
     }
 
     .clients-list__icon {
@@ -27,10 +32,3 @@
         transition: fill var(--transition-dur-n-fuc);
        }
 
-    .clients-list__link:hover {
-        border-color: var(--Blue-color);
-    }
-
-   .clients-list__link:hover .clients-list__icon {
-    fill: var(--Blue-color);
-   }

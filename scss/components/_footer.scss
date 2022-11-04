@@ -23,7 +23,7 @@
         flex-direction: column;
         gap:9px;
     }
-    /* Footer */
+    
 
 
 .footer-logo {
@@ -51,6 +51,11 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
     transition:color var(--transition-dur-n-fuc);
+
+    &:hover  {
+      color: var(--Blue-color);
+      }
+
 }
 
 .footer__link {
@@ -60,15 +65,16 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
     transition:color var(--transition-dur-n-fuc);
+
+    &:hover {
+      color: var(--Blue-color);
+      }
+
 } 
 
 
-.address__link:hover ,.footer__link:hover {
-    color: var(--Blue-color);
-    }
 
 
-/*  */
 
 .footer-social-container__text {
     margin-top: 0;
@@ -88,12 +94,15 @@
     margin-right: 10px;
     width: 44px;
     height: 44px;
+
+    &:last-child {
+      margin-right: 0%;
+  }
+
 }
 
 
-.addressfooter-social-container__item:last-child {
-    margin-right: 0%;
-}
+
 
 .footer-social-container__link {
     width: 100%;
@@ -105,12 +114,17 @@
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     transition: background-color var(--transition-dur-n-fuc);
+
+
+
+    &:hover {
+      background-color: var(--Blue-color);
+  }
+
     
 }
 
-.footer-social-container__link:hover {
-    background-color: var(--Blue-color);
-}
+
 
 .footer-social-container__svg {
     fill: currentColor;
@@ -147,12 +161,15 @@
     background-color: transparent;
     color:var(--white-bgc) ;
     transition: border-color var(--transition-dur-n-fuc);
+
+    &:focus {
+      outline: none;
+      border-color: var(--Blue-color);
     }
 
-  .footer-form__input:focus {
-    outline: none;
-    border-color: var(--Blue-color);
-  }
+    }
+
+ 
 
   /* Кнопка в футері */
 
@@ -172,20 +189,25 @@
     color: var(--white-bgc);
     cursor: pointer;
     transition: background-color var(--transition-dur-n-fuc);
+
+    &:hover , &:focus {
+      background-color: var(--bgc-btn-act);
+    }
+
+    &::after {
+      top:50%;
+      transform: translateY(-50%);
+      margin-left: 10px;
+      position: absolute;
+      content:'';
+      width: 24px;
+      height: 24px;
+      background-image: url(../images/icon-send.svg);
+      fill: var(--white-bgc);
+    }
+
   }
 
-  .footer-form__btn:hover , .footer-form__btn:focus {
-    background-color: var(--bgc-btn-act);
-  }
+ 
 
-  .footer-form__btn::after {
-    top:50%;
-    transform: translateY(-50%);
-    margin-left: 10px;
-    position: absolute;
-    content:'';
-    width: 24px;
-    height: 24px;
-    background-image: url(../images/icon-send.svg);
-    fill: var(--white-bgc);
-  }
+ 
